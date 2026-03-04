@@ -1,0 +1,121 @@
+.countries {
+    background: var(--bg-white);
+    position: relative;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.country-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 50px 40px;
+    border-radius: 24px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(26, 71, 42, 0.2);
+    transition: all 0.3s ease;
+}
+
+.country-card:hover {
+    box-shadow: 0 15px 50px rgba(26, 71, 42, 0.3);
+}
+
+.country-flag {
+    font-size: 60px;
+    margin-bottom: 20px;
+    display: inline-block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.country-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.country-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+}
+
+.country-focus {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    backdrop-filter: blur(10px);
+}
+
+.country-glow {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.worldwide-note {
+    margin-top: 80px;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border: 2px solid var(--primary-light);
+}
+
+.worldwide-icon {
+    font-size: 60px;
+    flex-shrink: 0;
+}
+
+.worldwide-note h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.worldwide-note p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .countries-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .country-card {
+        padding: 40px 30px;
+    }
+
+    .country-card h3 {
+        font-size: 28px;
+    }
+
+    .worldwide-note {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+    }
+}
